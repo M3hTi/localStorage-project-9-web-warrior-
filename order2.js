@@ -4,6 +4,9 @@ const orderForm = document.querySelector('#orderForm');
 const firstFieldset = orderForm.querySelector('#fs1');
 
 
+const signUpBtn = document.querySelector('#signupBtn');
+
+
 function showPreviousPage() {
     const fieldsetEl = document.createElement('fieldset');
     // Insert elements before the first fieldset
@@ -43,7 +46,7 @@ function showPreviousPage() {
         fieldsetEl.appendChild(inputEl);
         
 
-        
+
 
 
         
@@ -52,6 +55,24 @@ function showPreviousPage() {
 }
 
 
+function signUp() {
+    const radioInputs = document.querySelectorAll('input[type="radio"]');
+    for (const radioInput of radioInputs) {
+        if (radioInput.checked) {
+            objData[radioInput.name] = radioInput.value;
+        }
+    }
+    const textarea = document.querySelector('#allergyDesc');
+    if(textarea.value) {
+        objData[textarea.name] = textarea.value
+    }
+    console.log(objData);
+    localStorage.setItem('orderInfo', JSON.stringify(objData));
+    orderForm.submit();
+}
+
+
 
 
 window.addEventListener('load', showPreviousPage);
+signUpBtn.addEventListener('click', signUp)
