@@ -211,12 +211,22 @@
  /* form */
  form {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
  }
  
+ fieldset {
+    padding: 15px;
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid rgb(161,127,67);
+    border-radius: 5px;
+ }
+
  fieldset.text, fieldset.checks {
     padding: 5px;
-    width: 45%;
-    float: left;
+    width: 30%;
  }
  
  #fs1 {
