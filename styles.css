@@ -325,8 +325,24 @@
     padding: 10px;
     font-size: 20px;
  }
+
  .error{
     color: red;
     text-align: center;
     background-color: white;
  }
+.js-button{
+   background-color: white;
+   position: relative;
+   padding: 8px 4px;
+}
+.js-button button{
+   position: absolute;
+   right: 0;
+   bottom: 15px;
+   background-color: red;
+   border: none;
+   cursor: pointer;
+   padding: 16px 8px;
+   font-weight: bold;
+}
